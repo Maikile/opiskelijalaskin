@@ -14,7 +14,6 @@ public class University {
     final private String FILENAME;
     private ArrayList<Student> students = new ArrayList<>();
     private ArrayList<Grade> grades = new ArrayList<>();
-    private String choice;
 
     public University(){
         FILENAME = "students.data";
@@ -41,16 +40,14 @@ public class University {
 
     }
 }
-    public void listGrades(){
-        System.out.println("Minkä opiskelijan suoritteet listataan?");
-        String stringChoice = scan.nextLine();
-        int choice = Integer.parseInt(stringChoice);
+    public void listGrades(int choice){
+
         for (Grade marks : grades) {
             if(choice == marks.getChooseStudent()){
                 System.out.println(marks.getCourse()+": "+marks.getGrade());
             }
         }
-    }
+}
 
     public void saveStudents(){
         try {

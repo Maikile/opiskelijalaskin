@@ -1,7 +1,5 @@
 package main;
 
-
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
@@ -50,7 +48,10 @@ public class App {
 
                     case 4:
                     university.listStudents();
-                    university.listGrades();
+                    System.out.println("Minkä opiskelijan suoritteet listataan?");
+                    String stringChoice = sc.nextLine();
+                    int choice = Integer.parseInt(stringChoice);
+                    university.listGrades(choice);
                     break;
 
                     case 5:
