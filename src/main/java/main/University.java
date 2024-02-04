@@ -11,7 +11,6 @@ import java.util.ArrayList;
 public class University {
     final private String FILENAME;
     private ArrayList<Student> students = new ArrayList<>();
-    private EventLogger eventLogger;
 
     public University(){
         FILENAME = "students.data";
