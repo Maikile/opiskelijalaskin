@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class University {
-    Scanner sc = new Scanner(System.in);
+    Scanner scan = new Scanner(System.in);
     final private String FILENAME;
     private ArrayList<Student> students = new ArrayList<>();
     private ArrayList<Grade> grades = new ArrayList<>();
@@ -42,7 +42,7 @@ public class University {
 }
     public void listGrades(){
         System.out.println("Minkä opiskelijan suoritteet listataan?");
-        String stringChoice = sc.nextLine();
+        String stringChoice = scan.nextLine();
         int choice = Integer.parseInt(stringChoice);
         for (Grade marks : grades) {
             if(choice == marks.getChooseStudent()){
