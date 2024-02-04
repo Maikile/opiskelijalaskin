@@ -14,6 +14,7 @@ public class University {
     final private String FILENAME;
     private ArrayList<Student> students = new ArrayList<>();
     private ArrayList<Grade> grades = new ArrayList<>();
+    private String choice;
 
     public University(){
         FILENAME = "students.data";
@@ -50,7 +51,6 @@ public class University {
             }
         }
     }
-
 
     public void saveStudents(){
         try {
