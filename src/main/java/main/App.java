@@ -10,7 +10,6 @@ public class App {
     Calculator calculator = null;
     Student student = null;
     Grade grade = null;
-    ArrayList<Grade> grades = new ArrayList<>();
     {
         Scanner sc = new Scanner(System.in);
         boolean exit = false;
@@ -46,23 +45,15 @@ public class App {
                     String stringMark = sc.nextLine();
                     int mark = Integer.parseInt(stringMark);
                     grade = new Grade(course,mark,chooseStudent);
-                    grades.add(grade);
+                    university.addGrade(grade);
                     break;
 
                     case 4:
                     university.listStudents();
-                    System.out.println("Minkä opiskelijan suoritteet listataan?");
-                    String stringChoice = sc.nextLine();
-                    int choice = Integer.parseInt(stringChoice);
-                    for (Grade marks : grades) {
-                        if(choice == marks.getChooseStudent()){
-                            System.out.println(marks.getCourse()+": "+marks.getGrade());
-                        }
-                    }
+                    university.listGrades();
                     break;
 
                     case 5:
-
                     System.out.println("Minkä opiskelijan suoritteiden keskiarvo lasketaan?");
                     String stringAverageChoice = sc.nextLine();
                     int averageChoice = Integer.parseInt(stringAverageChoice);
