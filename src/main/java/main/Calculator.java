@@ -4,39 +4,39 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Calculator implements Serializable{
-    private ArrayList<Grade> grades = new ArrayList<>();
-
+    ArrayList<Grade> grades = new ArrayList<>();
 
     public void getAverageGrade(int averageChoice){
+        System.out.println(grades);
         double sum = 0;
-        int a = 0;        
+        int i = 0;
         for (Grade marks : grades) {
             if(averageChoice == marks.getChooseStudent()){
                 sum += marks.getGrade();
-                a++;
+                i++;
             }
         }
-        if(a == 0){
+        if(i == 0){
             System.out.println("Keskiarvo on 0");
         }
         else{
-            System.out.println("Keskiarvo on "+sum/a);
+            System.out.println("Keskiarvo on "+sum/i);
         }
     }
 
 public void getMedianGrade(int medianChoice){
     double sum = 0;
-    int a = 0;        
+    int i = 0;        
     for (Grade marks : grades) {
         if(medianChoice == marks.getChooseStudent()){
-            a++;
+            i++;
         }
     }
-    if(a == 0){
+    if(i == 0){
         System.out.println("Mediaani on 0");
     }
     else{
-        System.out.println("Mediaani on "+sum/a);
+        System.out.println("Mediaani on "+sum/i);
     }
 }
 }

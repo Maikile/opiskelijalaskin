@@ -3,6 +3,7 @@ package main;
 import java.util.Scanner;
 
 public class App {
+
     public static void main( String[] args ){
     University university = new University();
     Calculator calculator = new Calculator();
@@ -55,17 +56,19 @@ public class App {
                     break;
 
                     case 5:
+                    university.listStudents();
                     System.out.println("Minkä opiskelijan suoritteiden keskiarvo lasketaan?");
                     String stringAverageChoice = sc.nextLine();
                     int averageChoice = Integer.parseInt(stringAverageChoice);
-                    calculator.getAverageGrade(averageChoice);
+                    university.getAverageGrade(averageChoice);
                     break;
                     
                     case 6:
+                    university.listStudents();
                     System.out.println("Minkä opiskelijan suoritteiden mediaani lasketaan?");
                     String stringMedianChoice = sc.nextLine();
                     int medianChoice = Integer.parseInt(stringMedianChoice);
-                    calculator.getMedianGrade(medianChoice);
+                    university.getMedianGrade(medianChoice);
 
                     case 7:
                     university.saveStudents();
