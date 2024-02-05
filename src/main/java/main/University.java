@@ -88,7 +88,7 @@ public void getAverageGrade(int averageChoice){
         }
     }
     if(i == 0){
-        System.out.println("Keskiarvo on 0");
+        System.out.println("Keskiarvo on 0.0");
     }
     else{
         System.out.println("Keskiarvo on "+sum/i);
